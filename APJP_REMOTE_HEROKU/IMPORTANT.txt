@@ -1,0 +1,50 @@
+HEROKU:
+
+CMD:
+	SET HTTP_PROXY=http://username:password@address:port
+
+GIT:
+	
+PUTTY:
+SESSION
+	HOST NAME: address
+	PORT: port
+CONNECTION
+	PROXY
+		TYPE: HTTP
+		HOST NAME: address
+		PORT: port
+		USERNAME: username
+		PASSWORD: password
+	SSH
+		TUNNELS
+			SOURCE PORT: 9090
+			DYNAMIC
+			AUTO
+
+FIREFOX:
+TOOLS
+	OPTIONS
+		NETWORK
+			SETTINGS
+				MANUAL PROXY CONFIGURATION
+					SOCKS HOST: 127.0.0.1
+					PORT: 9090
+about:config
+	network.proxy.socks_remote_dns: true
+
+FREECAP:
+	FILE
+		SETTINGS
+			DEFAULT PROXY
+				PROXY SETTINGS
+					DEFAULT PROXY
+						SERVER: 127.0.0.1
+						PORT: 9090
+					SOCKS V5
+		NEW APPLICATION
+			BROWSE
+				C:\WINNT\system32\cmd.exe
+	RUN
+
+http://help.github.com/git-cheat-sheets/
